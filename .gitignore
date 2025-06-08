@@ -38,10 +38,10 @@ venv.bak/
 .streamlit/secrets.toml
 
 # Database
-data/job_data.db
-*.db
-*.sqlite
-*.sqlite3
+# data/job_data.db
+# *.db
+# *.sqlite
+# *.sqlite3
 
 # Logs
 *.log

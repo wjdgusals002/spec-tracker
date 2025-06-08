@@ -12,6 +12,7 @@ from collections import Counter
 from sentence_transformers import SentenceTransformer, util
 import streamlit as st
 from sklearn.preprocessing import MinMaxScaler
+import os
 
 class AdvancedJobMatcher:
     """최적화된 직무 매칭 시스템"""
@@ -20,6 +21,7 @@ class AdvancedJobMatcher:
         self.db_path = db_path
         self._validate_database()
         self._initialize_data()
+        os.environ['SENTENCE_TRANSFORMERS_HOME'] = '/opt/venv/model_cache'
         # 임베딩 모델 및 job_vectors 반드시 여기서 직접 초기화 (Streamlit 캐시 안 씀)
         self.embedder = SentenceTransformer('snunlp/KR-SBERT-V40K-klueNLI-augSTS')
         self._create_job_vectors()
