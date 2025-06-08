@@ -1,0 +1,39 @@
+# Core Data Processing
+pandas>=1.5.0
+numpy>=1.21.0
+
+# Machine Learning
+scikit-learn>=1.1.0
+
+# Natural Language Processing
+nltk>=3.8
+konlpy>=0.6.0
+
+# Web Framework
+streamlit>=1.28.0
+
+# Visualization
+plotly>=5.15.0
+matplotlib>=3.5.0
+wordcloud>=1.9.0
+
+# Maps
+folium>=0.14.0
+streamlit-folium>=0.13.0
+
+# AI/LLM
+cerebras-cloud-sdk>=1.0.0
+
+# Utilities
+python-dotenv>=1.0.0
+tqdm>=4.64.0
+
+# Database (built-in with Python)
+# sqlite3 - included in Python standard library
+
+# Async support (built-in with Python 3.7+)
+# asyncio - included in Python standard library
+
+# Additional utilities
+requests>=2.28.0
+pickle-mixin>=1.0.2 
