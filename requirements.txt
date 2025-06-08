@@ -1,6 +1,6 @@
-# Core Data Processing
+# Core Data Processing (NumPy 버전 고정!)
 pandas>=1.5.0
-numpy>=1.21.0
+numpy>=1.21.0,<2.0.0
 
 # Machine Learning
 scikit-learn>=1.1.0
@@ -29,7 +29,7 @@ pickle-mixin>=1.0.2
 # AI/LLM
 cerebras-cloud-sdk>=1.0.0
 
-# Sentence Transformers (Railway 호환 버전)
+# Sentence Transformers (NumPy 1.x 호환)
 sentence-transformers==2.2.2
 torch==2.1.0
 transformers==4.35.0
