@@ -24,19 +24,20 @@ streamlit-folium>=0.13.0
 # Utilities
 python-dotenv>=1.0.0
 requests>=2.28.0
-pickle-mixin>=1.0.2 
+pickle-mixin>=1.0.2
 
 # AI/LLM
 cerebras-cloud-sdk>=1.0.0
 
-# Sentence Transformers 최신 조합 (최신 torch)
+# Sentence Transformers (Railway 호환 버전)
 sentence-transformers==2.2.2
-torch==2.7.1
-torchvision==0.22.1
-sentencepiece==0.1.99
-tokenizers==0.15.2
+torch==2.1.0
+transformers==4.35.0
+sentencepiece>=0.1.97
+tokenizers>=0.14.0
 huggingface-hub>=0.15.0
 safetensors>=0.3.0
 
+# 안정성 패키지
 protobuf>=3.20.0,<4.0.0
 tqdm>=4.64.0
