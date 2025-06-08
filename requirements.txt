@@ -26,8 +26,6 @@ cerebras-cloud-sdk>=1.0.0
 
 # Utilities
 python-dotenv>=1.0.0
-tqdm>=4.64.0
-
 # Database (built-in with Python)
 # sqlite3 - included in Python standard library
 
@@ -41,7 +39,8 @@ pickle-mixin>=1.0.2
 # sentence-transformers 관련 - 버전 고정
 sentence-transformers==2.2.2
 transformers==4.30.2
-torch==2.5.0
+torch
+torchvision
 # 호환성을 위한 버전 고정
 
 # 지원 패키지들
