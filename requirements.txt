@@ -37,18 +37,18 @@ requests>=2.28.0
 pickle-mixin>=1.0.2 
 
 # sentence-transformers 관련 - 버전 고정
-sentence-transformers==2.2.2
 transformers==4.30.2
 torch
 torchvision
 # 호환성을 위한 버전 고정
 
-# 지원 패키지들
-sentencepiece>=0.1.97
-tokenizers>=0.13.0
 huggingface-hub>=0.15.0
 safetensors>=0.3.0
 
+streamlit
+sentencepiece==0.1.99
+tokenizers==0.15.2
+sentence-transformers
 # 추가 안정성 패키지
 # 안정성 패키지
 protobuf>=3.20.0,<4.0.0
