@@ -29,19 +29,14 @@ pickle-mixin>=1.0.2
 # AI/LLM
 cerebras-cloud-sdk>=1.0.0
 
-# Sentence Transformers (최적 버전 조합)
+# Sentence Transformers 최신 조합 (최신 torch)
 sentence-transformers==2.2.2
-torch==2.2.1
-torchvision==0.17.1
+torch==2.7.1
+torchvision==0.22.1
 sentencepiece==0.1.99
-tokenizers==0.13.3
-
-# transformers/torch/torchvision 버전은 직접 명시하지 않는 것이 더 안전
-# transformers==4.30.2  # <- 삭제 (sentence-transformers가 필요시 가져감)
-
+tokenizers==0.15.2
 huggingface-hub>=0.15.0
 safetensors>=0.3.0
 
-# 추가 안정성 패키지
 protobuf>=3.20.0,<4.0.0
 tqdm>=4.64.0
