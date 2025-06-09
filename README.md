@@ -2,7 +2,6 @@
 
 ![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)
 ![Streamlit](https://img.shields.io/badge/Streamlit-1.28+-red.svg)
-![License](https://img.shields.io/badge/License-MIT-green.svg)
 
 **AI 기반 맞춤형 직무 추천 시스템**
 
@@ -331,10 +330,6 @@ pytest
 - **느린 로딩**: 캐시 활용 및 지연 로딩 적용
 - **API 제한**: 요청 빈도 조절
 
-## 📄 라이선스
-
-이 프로젝트는 [MIT 라이선스](LICENSE) 하에 배포됩니다.
-
 ## 👥 팀
 
 - **개발자**: [Your Name](https://github.com/your-username)
@@ -358,7 +353,6 @@ pytest
 
 <div align="center">
 
-**🚀 Spec Tracker와 함께 당신의 커리어를 한 단계 업그레이드하세요!**
 
 [시작하기](#-빠른-시작) • [문서](docs/) • [데모](https://your-demo-link.streamlit.app) • [기여하기](#-기여-가이드)
 
