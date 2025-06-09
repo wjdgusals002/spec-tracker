@@ -12,20 +12,25 @@ from collections import Counter
 from sentence_transformers import SentenceTransformer, util
 import streamlit as st
 from sklearn.preprocessing import MinMaxScaler
-import os
+import torch
 
 class AdvancedJobMatcher:
     """최적화된 직무 매칭 시스템"""
 
     def __init__(self, db_path: str = 'data/job_data.db'):
+        # 캐시 디렉토리 강제 설정
+        cache_dir = os.path.expanduser('~/sentence_transformers_cache')
+        os.makedirs(cache_dir, exist_ok=True)
+        os.environ['SENTENCE_TRANSFORMERS_HOME'] = cache_dir
+        os.environ['HF_HOME'] = cache_dir
+        os.environ['TRANSFORMERS_CACHE'] = cache_dir
+        
         self.db_path = db_path
         self._validate_database()
         self._initialize_data()
-        os.environ['SENTENCE_TRANSFORMERS_HOME'] = '/opt/venv/model_cache'
-        # 임베딩 모델 및 job_vectors 반드시 여기서 직접 초기화 (Streamlit 캐시 안 씀)
-        self.embedder = SentenceTransformer('snunlp/KR-SBERT-V40K-klueNLI-augSTS')
+        
+        self.embedder = SentenceTransformer('all-MiniLM-L6-v2', cache_folder=cache_dir)
         self._create_job_vectors()
-        # 나머지 속성들 초기화
         self.skill_clusters = self._create_skill_clusters()
         self.career_paths = self._create_career_paths()
 
