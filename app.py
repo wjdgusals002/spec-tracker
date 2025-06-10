@@ -102,28 +102,6 @@ def show_sidebar():
             st.metric("저장", len(history.get('saved_jobs', [])))
             st.metric("검색", len(history.get('skill_searches', [])))
         
-        # 설정
-        st.markdown("---")
-        st.markdown("### ⚙️ 설정")
-        
-        # 테마 설정
-        theme = st.selectbox(
-            "테마",
-            ["다크 모드", "라이트 모드"],
-            index=0 if st.session_state.get('theme', 'dark') == 'dark' else 1
-        )
-        
-        if theme == "라이트 모드":
-            st.warning("라이트 모드는 준비 중입니다.")
-        
-        # 데이터 초기화
-        if st.button("🔄 데이터 초기화", use_container_width=True):
-            for key in ['user_history', 'job_matches', 'user_skills']:
-                if key in st.session_state:
-                    del st.session_state[key]
-            SessionManager.init_session_state()
-            st.success("초기화되었습니다!")
-            st.rerun()
 
 def main():
     """메인 애플리케이션"""
@@ -144,7 +122,7 @@ def main():
     
     # 메인 탭 네비게이션
     tab1, tab2, tab3, tab4 = st.tabs([
-        "📊 시장 인사이트",
+        "📊 직무 인사이트",
         "🎯 직무 매칭",
         "🚀 경력 개발",
         "🛠️ 직무별 스킬"

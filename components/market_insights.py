@@ -11,8 +11,8 @@ from datetime import datetime, timedelta
 from utils.helpers import UIHelpers
 
 def show_market_insights_interface(matcher: Any):
-    """시장 인사이트 인터페이스"""
-    st.markdown('<h2 class="section-title">📊 실시간 시장 인사이트</h2>', unsafe_allow_html=True)
+    """직무 인사이트 인터페이스"""
+    st.markdown('<h2 class="section-title">📊 실시간 직무 인사이트</h2>', unsafe_allow_html=True)
     
     # 시장 데이터 가져오기
     insights = matcher.get_market_insights()
@@ -280,43 +280,7 @@ def show_job_market_analysis(matcher: Any, insights: Dict[str, Any]):
                 
                 st.plotly_chart(fig, use_container_width=True)
     
-    # 직무별 스킬 요구사항
-    st.markdown("### 📊 직무별 평균 요구 스킬")
-    
-    if insights.get('avg_skills_by_job'):
-        job_skills_df = pd.DataFrame(
-        [(job, stats, 0)   # stats가 바로 평균값, 표준편차 0으로 처리
-        for job, stats in insights['avg_skills_by_job'].items()],
-        columns=['직무', '평균', '표준편차']
-    )
-        
-        fig = go.Figure()
-        
-        # 평균값 막대
-        fig.add_trace(go.Bar(
-            x=job_skills_df['직무'],
-            y=job_skills_df['평균'],
-            name='평균 요구 스킬',
-            marker_color='#667eea',
-            error_y=dict(
-                type='data',
-                array=job_skills_df['표준편차'],
-                visible=True,
-                color='#a0a0a0'
-            )
-        ))
-        
-        fig.update_layout(
-            title='직무별 평균 요구 기술 수',
-            xaxis_title='직무',
-            yaxis_title='평균 스킬 수',
-            height=400,
-            plot_bgcolor='rgba(0,0,0,0)',
-            paper_bgcolor='rgba(0,0,0,0)',
-            font=dict(color='white')
-        )
-        
-        st.plotly_chart(fig, use_container_width=True)
+
     
     # 급여 통계
     st.markdown("### 💰 급여 현황")
@@ -580,7 +544,7 @@ def show_location_analysis(matcher: Any, insights: Dict[str, Any]):
 
 def show_ai_insights(matcher: Any, insights: Dict[str, Any]):
     """AI 인사이트"""
-    st.markdown("### 💡 AI 시장 인사이트")
+    st.markdown("### 💡 AI 직무 인사이트")
     
     # 주요 인사이트 생성
     ai_insights = []

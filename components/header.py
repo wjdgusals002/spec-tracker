@@ -10,7 +10,7 @@ def show_main_header():
     
     st.markdown("""
     <div class="main-header">
-        <h1 style="color: white; font-size: 3rem; margin: 0;">🚀 Spec Tracker</h1>
+        <h1 style="color: white; font-size: 3rem; margin: 0;">Spec Tracker</h1>
         <p style="color: rgba(255,255,255,0.9); font-size: 1.2rem; margin-top: 1rem;">
             AI 기반 맞춤형 직무 추천 | 경력 개발 로드맵 | 실시간 시장 인사이트
         </p>

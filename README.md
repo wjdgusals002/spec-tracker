@@ -330,24 +330,9 @@ pytest
 - **느린 로딩**: 캐시 활용 및 지연 로딩 적용
 - **API 제한**: 요청 빈도 조절
 
-## 👥 팀
 
-- **개발자**: [Your Name](https://github.com/your-username)
-- **데이터 사이언티스트**: [Data Scientist Name]
-- **UI/UX 디자이너**: [Designer Name]
 
-## 📞 연락처
 
-- **이메일**: your.email@example.com
-- **이슈 트래킹**: [GitHub Issues](https://github.com/your-username/spec-tracker/issues)
-- **문의사항**: [Discussion](https://github.com/your-username/spec-tracker/discussions)
-
-## 🙏 감사의 말
-
-- **Streamlit**: 놀라운 웹앱 프레임워크
-- **Cerebras**: 강력한 LLM API 제공
-- **KoNLPy**: 한국어 자연어 처리 지원
-- **오픈소스 커뮤니티**: 모든 기여자들에게 감사
 
 ---
 
